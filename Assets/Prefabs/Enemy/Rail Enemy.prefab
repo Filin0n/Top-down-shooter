@@ -289,7 +289,7 @@ NavMeshAgent:
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 300
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -310,9 +310,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71a7e4308234cc54babbfba0af73c01e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hp: 0
-  _damage: 0
-  agroRadius: 0
+  _hp: 10
+  _damage: 1
+  agroRadius: 5
+  enemyHead: {fileID: 1599810616616174654}
   player: {fileID: 0}
   distanceToPlayer: Infinity
-  targetPoints: []
+  _wayIsLoop: 0
+  _minDistanceToPoint: 1
+  _targetPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

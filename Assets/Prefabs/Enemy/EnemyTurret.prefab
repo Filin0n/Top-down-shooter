@@ -49,6 +49,7 @@ MonoBehaviour:
   _bulletSpeed: 20
   _bulletDamage: 0
   _timeToDestroyBullet: 2
+  _shooter: {fileID: 9006101532574191281}
   _shootInterval: 0.3
 --- !u!114 &9006101532193745483
 MonoBehaviour:
@@ -62,6 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67918270ef6fa2947af4544101cd92c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &9006101532262428197
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,6 +156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9006101532574191281}
   - component: {fileID: 9006101532574191280}
+  - component: {fileID: 1628457022}
   m_Layer: 0
   m_Name: EnemyTurret
   m_TagString: Untagged
@@ -189,8 +192,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66ac7f231f158a443ae931bfabb79cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hp: 0
+  _hp: 100
   _damage: 0
+  agroRadius: 5
+  enemyHead: {fileID: 9006101532193745483}
+  player: {fileID: 0}
+  distanceToPlayer: Infinity
+--- !u!135 &1628457022
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9006101532574191282}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9006101532820606079
 GameObject:
   m_ObjectHideFlags: 0

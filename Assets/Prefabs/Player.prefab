@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1673520286879842462}
   - component: {fileID: 1673520286879842463}
+  - component: {fileID: 1626213542}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -48,6 +49,19 @@ MonoBehaviour:
   _speedMove: 5
   _mobileController: {fileID: 0}
   _minDistanceToObstacle: 10
+--- !u!65 &1626213542
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673520286879842456}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1673520287377961322
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,10 +190,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bulletPrefab: {fileID: 3132382808360962349, guid: b5af9fb96e58e0a47aa3e285f291708d, type: 3}
-  _bulletSpeed: 10
+  _bulletSpeed: 20
   _bulletDamage: 0
   _timeToDestroyBullet: 2
-  _shootInterval: 0.5
+  _shooter: {fileID: 1673520286879842462}
+  _shootInterval: 0.1
 --- !u!114 &1673520287383895257
 MonoBehaviour:
   m_ObjectHideFlags: 0

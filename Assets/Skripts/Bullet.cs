@@ -29,7 +29,7 @@ public class Bullet : MonoBehaviour
     {
         if (collision.TryGetComponent(out Enemy enemy) && shooter.GetComponent<PlayerController>())
         {
-            Debug.Log("Shot!!!");
+            Debug.Log("Hit Enemy");
             enemy.AplyDamage(damage);
             Destroy(gameObject);
         }
@@ -39,8 +39,19 @@ public class Bullet : MonoBehaviour
             Debug.Log("Hit Player");
             Destroy(gameObject);
         }
-       
-    }
 
+        if (collision.TryGetComponent(out Obstacle obstacle))
+        {
+            Debug.Log("Hit Obstacle");
+            obstacle.AplyDamage(damage);
+            Destroy(gameObject);
+        }
+
+        if (collision.TryGetComponent(out Wall wall))
+        {
+            Debug.Log("Hit wall");
+            Destroy(gameObject);
+        }
+    }
 }
 
